@@ -16,9 +16,6 @@ export interface PricingPlan {
 export const pricingConfig = {
   title: "Pricing",
   description: "Harga bersesuaian dengan kebutuhan project anda.",
-  monthlyLabel: "Monthly",
-  yearlyLabel: "Yearly",
-  dailyLabel: "Daily",
   proLabel: "Pro",
   defaultPeriod: "Template",
 };
@@ -97,50 +94,6 @@ export const pricingPlans: PricingPlan[] = [
         name: "Elite",
         badge: "Elite",
         price: 40,
-        features: [
-          "Everything in PRO",
-          "Advanced analytics",
-          "Custom branding",
-          "Unlimited users",
-        ],
-        buttonText: "Purchase",
-      },
-    ],
-  },
-  {
-    type: "Undangan",
-    options: [
-      {
-        id: "free",
-        name: "FREE",
-        badge: "FREE",
-        price: 0,
-        features: [
-          "Unlimited Integrations",
-          "Windows, Linux, Mac support",
-          "24/7 Support",
-          "Free updates",
-        ],
-        buttonText: "Get Started",
-      },
-      {
-        id: "pro",
-        name: "PRO",
-        badge: "PRO",
-        price: 25,
-        features: [
-          "Everything in FREE",
-          "Live call support every month",
-          "Unlimited Storage",
-        ],
-        buttonText: "Purchase",
-        isPopular: true,
-      },
-      {
-        id: "elite",
-        name: "Elite",
-        badge: "Elite",
-        price: 50,
         features: [
           "Everything in PRO",
           "Advanced analytics",
