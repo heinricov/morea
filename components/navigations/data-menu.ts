@@ -39,7 +39,7 @@ export const NavHeaderMenu = [
   },
   {
     title: "Blog",
-    href: "#",
+    href: "/blogs",
   },
   {
     title: "FAQ",

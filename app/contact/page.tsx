@@ -13,7 +13,7 @@ export default function ContactPage() {
   const email = "email@example.com";
   const web = { label: "morea.tech", url: "https://morea.tech" };
   return (
-    <section className="h-screen flex items-center justify-center">
+    <section className="h-screen flex items-center justify-center px-5 pb-24">
       <div className="container">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="mx-auto flex max-w-sm flex-col justify-between gap-10">
