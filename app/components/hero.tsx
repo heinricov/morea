@@ -76,7 +76,7 @@ export default function HeroSection({
         }
       : image;
   return (
-    <section className="py-5 pb-24 md:py-24">
+    <section className="py-5 pb-24 md:py-18">
       <div className="max-w-7xl mx-auto px-5">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
