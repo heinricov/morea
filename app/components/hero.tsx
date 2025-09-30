@@ -1,7 +1,11 @@
+"use client";
+
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { templateData } from "@/lib/static/template-data";
 
 interface Hero1Props {
   badge?: string;
@@ -42,8 +46,37 @@ export default function HeroSection({
     alt: "Hero section demo image showing interface components",
   },
 }: Hero1Props) {
+  // Filter templates with heroBanner: "true"
+  const heroTemplates = templateData.filter(
+    (template) => template.heroBanner === "true"
+  );
+
+  // State for current image index
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-rotate images every 10 seconds
+  useEffect(() => {
+    if (heroTemplates.length === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % heroTemplates.length
+      );
+    }, 5000); //durasi
+
+    return () => clearInterval(interval);
+  }, [heroTemplates.length]);
+
+  // Get current hero image
+  const currentHeroImage =
+    heroTemplates.length > 0
+      ? {
+          src: heroTemplates[currentImageIndex].image,
+          alt: heroTemplates[currentImageIndex].title,
+        }
+      : image;
   return (
-    <section className="py-5 pb-24 md:py-32">
+    <section className="py-5 pb-24 md:py-24">
       <div className="max-w-7xl mx-auto px-5">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -75,11 +108,13 @@ export default function HeroSection({
               )}
             </div>
           </div>
-          <img
-            src={image.src}
-            alt={image.alt}
-            className="max-h-96 w-full rounded-md object-cover"
-          />
+          <div className="relative h-96 w-full overflow-hidden rounded-md">
+            <img
+              src={currentHeroImage.src}
+              alt={currentHeroImage.alt}
+              className="h-full w-full object-cover transition-opacity duration-500"
+            />
+          </div>
         </div>
       </div>
     </section>

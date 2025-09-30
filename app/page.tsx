@@ -10,7 +10,7 @@ export default function Home() {
     <section className="">
       <HeroSection
         heading="Morea"
-        description="Morea is a template website built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project."
+        description="Kami menyediakan template website yang mudah di modifikasi dan di deploy seperti magang atau kost website yang juga sudah kami kustomisasi."
         image={{
           src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
           alt: "Hero section demo image showing interface components",
@@ -19,7 +19,7 @@ export default function Home() {
       <ListTemplateSection
         tagline="Latest Updates"
         heading="Template Website"
-        description="Morea is a template website built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project."
+        description="Kami menyediakan template website yang mudah di modifikasi dan di deploy seperti magang atau kost website yang juga sudah kami kustomisasi."
       />
       <PricingSection />
       <TestimonialSection />
