@@ -1,122 +1,117 @@
-"use client";
-
-import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { useEffect, useState } from "react";
-
-import { Badge } from "@/components/ui/badge";
+import React from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { templateData } from "@/lib/static/template-data";
+import { Globe, LayoutTemplate } from "lucide-react";
+import Image from "next/image";
 
-interface Hero1Props {
-  badge?: string;
-  heading: string;
-  description: string;
-  buttons?: {
-    primary?: {
-      text: string;
-      url: string;
-    };
-    secondary?: {
-      text: string;
-      url: string;
-    };
-  };
-  image: {
-    src: string;
-    alt: string;
-  };
-}
-
-export default function HeroSection({
-  badge = "✨ Your Website Builder",
-  heading = "Blocks Built With Shadcn & Tailwind",
-  description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
-  buttons = {
-    primary: {
-      text: "Discover all components",
-      url: "https://www.shadcnblocks.com",
-    },
-    secondary: {
-      text: "View on GitHub",
-      url: "https://www.shadcnblocks.com",
-    },
-  },
-  image = {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
-    alt: "Hero section demo image showing interface components",
-  },
-}: Hero1Props) {
-  // Filter templates with heroBanner: "true"
-  const heroTemplates = templateData.filter(
-    (template) => template.heroBanner === "true"
-  );
-
-  // State for current image index
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // Auto-rotate images every 10 seconds
-  useEffect(() => {
-    if (heroTemplates.length === 0) return;
-
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % heroTemplates.length
-      );
-    }, 5000); //durasi
-
-    return () => clearInterval(interval);
-  }, [heroTemplates.length]);
-
-  // Get current hero image
-  const currentHeroImage =
-    heroTemplates.length > 0
-      ? {
-          src: heroTemplates[currentImageIndex].image,
-          alt: heroTemplates[currentImageIndex].title,
-        }
-      : image;
+export default function HeroSection() {
   return (
-    <section className="py-5 pb-24 md:py-18">
-      <div className="max-w-7xl mx-auto px-5">
-        <div className="grid items-center gap-8 lg:grid-cols-2">
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            {badge && (
-              <Badge variant="outline">
-                {badge}
-                <ArrowUpRight className="ml-2 size-4" />
-              </Badge>
-            )}
-            <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
-              {heading}
-            </h1>
-            <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
-              {description}
-            </p>
-            <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              {buttons.primary && (
-                <Button asChild className="w-full sm:w-auto">
-                  <a href={buttons.primary.url}>{buttons.primary.text}</a>
-                </Button>
-              )}
-              {buttons.secondary && (
-                <Button asChild variant="outline" className="w-full sm:w-auto">
-                  <a href={buttons.secondary.url}>
-                    {buttons.secondary.text}
-                    <ArrowRight className="size-4" />
-                  </a>
-                </Button>
-              )}
+    <>
+      <main className="overflow-hidden">
+        <section className="bg-linear-to-b to-muted from-background">
+          <div className="relative py-36">
+            <div className="relative z-10 mx-auto w-full container px-6">
+              <div className="md:w-1/2">
+                <div>
+                  <h1 className="max-w-md text-balance text-5xl font-medium md:text-6xl">
+                    Perluas Akses Bisnis Anda.
+                  </h1>
+                  <p className="text-muted-foreground my-8 max-w-2xl text-balance text-xl">
+                    Dengan website global, Anda dapat menjangkau pasar yang
+                    lebih luas dan mendapatkan lebih banyak pelanggan.
+                  </p>
+
+                  <div className="flex items-center gap-3">
+                    <Button asChild size="lg" className="pr-4.5">
+                      <Link href="#link">
+                        <span className="text-nowrap">Gunakan Template</span>
+                        <LayoutTemplate className="opacity-50" />
+                      </Link>
+                    </Button>
+                    <Button
+                      key={2}
+                      asChild
+                      size="lg"
+                      variant="outline"
+                      className="pl-5"
+                    >
+                      <Link href="#link">
+                        <Globe className="fill-primary/25 stroke-primary" />
+                        <span className="text-nowrap">Buat Website</span>
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="mt-10">
+                  <p className="text-muted-foreground">Tech Stack :</p>
+                  <div className="mt-6 grid max-w-sm grid-cols-3 gap-6  dark:invert">
+                    <div className="flex">
+                      <img
+                        className="h-4 w-fit"
+                        src="https://cdn.brandfetch.io/id2alue-rx/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1714556231750"
+                        alt="NextJS Logo"
+                        height="16"
+                        width="auto"
+                      />
+                    </div>
+                    <div className="flex">
+                      <img
+                        className="h-5 w-fit"
+                        src="https://cdn.brandfetch.io/idDpCfN4VD/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1726463494077"
+                        alt="Vercel Logo"
+                        height="20"
+                        width="auto"
+                      />
+                    </div>
+                    <div className="flex">
+                      <img
+                        className="h-4 w-fit"
+                        src="https://html.tailus.io/blocks/customers/github.svg"
+                        alt="GitHub Logo"
+                        height="16"
+                        width="auto"
+                      />
+                    </div>
+                    <div className="flex">
+                      <img
+                        className="h-4 w-fit"
+                        src="https://cdn.brandfetch.io/id93cieJNf/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1755894386589"
+                        alt="Shadcn/ui blocks"
+                        height="16"
+                        width="auto"
+                      />
+                    </div>
+                    <div className="flex">
+                      <img
+                        className="h-4 w-fit"
+                        src="https://cdn.brandfetch.io/idMNEQh7-0/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1687779044652"
+                        alt="Tailwind CSS"
+                        height="16"
+                        width="auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="perspective-near mt-24 translate-x-12 md:absolute md:-right-6 md:bottom-16 md:left-1/2 md:top-40 md:mt-0 md:translate-x-0">
+              <div className="before:border-foreground/5 before:bg-foreground/5 relative h-full before:absolute before:-inset-x-4 before:bottom-7 before:top-0 before:skew-x-6 before:rounded-[calc(var(--radius)+1rem)] before:border">
+                <div className="bg-background rounded-(--radius) shadow-foreground/10 ring-foreground/5 relative h-full -translate-y-12 skew-x-6 overflow-hidden border border-transparent shadow-md ring-1">
+                  <Image
+                    src="/product/shell-global/shell-global.png"
+                    alt="app screen"
+                    width="2880"
+                    height="1842"
+                    className="object-top-left size-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="relative h-96 w-full overflow-hidden rounded-md">
-            <img
-              src={currentHeroImage.src}
-              alt={currentHeroImage.alt}
-              className="h-full w-full object-cover transition-opacity duration-500"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      </main>
+    </>
   );
 }

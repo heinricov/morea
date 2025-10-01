@@ -8,14 +8,7 @@ import TestimonialSection from "./components/testimonials";
 export default function Home() {
   return (
     <section className="">
-      <HeroSection
-        heading="Morea"
-        description="Kami menyediakan template website yang mudah di modifikasi dan di deploy seperti magang atau kost website yang juga sudah kami kustomisasi."
-        image={{
-          src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
-          alt: "Hero section demo image showing interface components",
-        }}
-      />
+      <HeroSection />
       <ListTemplateSection
         tagline="Latest Updates"
         heading="Template Website"

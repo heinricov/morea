@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface NavLogoProps {
@@ -7,6 +8,7 @@ interface NavLogoProps {
   title?: string;
   className?: string;
   showTitle?: boolean;
+  asLink?: boolean;
 }
 
 export default function NavLogo({
@@ -16,13 +18,26 @@ export default function NavLogo({
   title = "Shadcnblocks.com",
   className = "",
   showTitle = true,
+  asLink = true,
 }: NavLogoProps) {
-  return (
-    <a href={url} className={`flex items-center gap-2 ${className}`}>
+  const content = (
+    <>
       {/* <img src={src} alt={alt} title={title} className="max-h-8" /> */}
       {showTitle && (
         <span className="text-lg font-semibold tracking-tighter">{title}</span>
       )}
-    </a>
+    </>
+  );
+
+  if (asLink) {
+    return (
+      <Link href={url} className={`flex items-center gap-2 ${className}`}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={`flex items-center gap-2 ${className}`}>{content}</div>
   );
 }

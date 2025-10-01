@@ -1,122 +1,87 @@
-"use client";
-
-import { Check } from "lucide-react";
-import { useState } from "react";
-
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
-import { pricingPlans, pricingConfig } from "@/lib/static/template-price";
+import { CircleCheck } from "lucide-react";
+
+const plans = [
+  {
+    name: "Starter",
+    price: 19,
+    description:
+      "Get 20 AI-generated portraits with 2 unique styles and filters.",
+    features: [
+      "5 hours turnaround time",
+      "20 AI portraits",
+      "Choice of 2 styles",
+      "Choice of 2 filters",
+      "2 retouch credits",
+    ],
+    buttonText: "Get 20 portraits in 5 hours",
+  },
+  {
+    name: "Advanced",
+    price: 29,
+    isRecommended: true,
+    description:
+      "Get 50 AI-generated portraits with 5 unique styles and filters.",
+    features: [
+      "3 hours turnaround time",
+      "50 AI portraits",
+      "Choice of 5 styles",
+      "Choice of 5 filters",
+      "5 retouch credits",
+    ],
+    buttonText: "Get 50 portraits in 3 hours",
+    isPopular: true,
+  },
+  {
+    name: "Premium",
+    price: 49,
+    description:
+      "Get 100 AI-generated portraits with 10 unique styles and filters.",
+    features: [
+      "1-hour turnaround time",
+      "100 AI portraits",
+      "Choice of 10 styles",
+      "Choice of 10 filters",
+      "10 retouch credits",
+    ],
+    buttonText: "Get 100 portraits in 1 hour",
+  },
+];
 
 export default function PricingSection() {
-  const [selectedPeriod, setSelectedPeriod] = useState(pricingPlans[0].type);
-  const [expandedFeatures, setExpandedFeatures] = useState<{
-    [key: string]: boolean;
-  }>({});
-
-  // Get current pricing options based on selected period
-  const currentPricingOptions =
-    pricingPlans.find((plan) => plan.type === selectedPeriod)?.options || [];
-
-  const toggleFeatures = (optionId: string) => {
-    setExpandedFeatures((prev) => ({
-      ...prev,
-      [optionId]: !prev[optionId],
-    }));
-  };
   return (
-    <section className="py-32">
-      <div className="max-w-7xl mx-auto px-5">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6">
-          <h2 className="text-pretty text-4xl font-bold lg:text-6xl">
-            {pricingConfig.title}
-          </h2>
-          <div className="flex flex-col justify-between gap-10 md:flex-row">
-            <p className="text-muted-foreground max-w-lg lg:text-xl">
-              {pricingConfig.description}
+    <div className="flex flex-col items-center justify-center py-12 px-6">
+      <h1 className="text-5xl sm:text-6xl font-semibold text-center tracking-tighter">
+        Pricing
+      </h1>
+      <div className="mt-12 sm:mt-16 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {plans.map((plan) => (
+          <div key={plan.name} className="border rounded-lg p-6">
+            <h3 className="text-lg font-medium">{plan.name}</h3>
+            <p className="mt-2 text-4xl font-bold">${plan.price}</p>
+            <p className="mt-4 font-medium text-muted-foreground">
+              {plan.description}
             </p>
-            <div className="bg-muted flex h-11 w-fit shrink-0 items-center rounded-md p-1 text-lg">
-              <RadioGroup
-                defaultValue={pricingConfig.defaultPeriod}
-                className={`h-full grid-cols-${pricingPlans.length}`}
-                onValueChange={(value) => {
-                  setSelectedPeriod(value);
-                }}
-              >
-                {pricingPlans.map((plan) => (
-                  <div
-                    key={plan.type}
-                    className='has-[button[data-state="checked"]]:bg-background h-full rounded-md transition-all'
-                  >
-                    <RadioGroupItem
-                      value={plan.type}
-                      id={plan.type}
-                      className="peer sr-only"
-                    />
-                    <Label
-                      htmlFor={plan.type}
-                      className="text-muted-foreground peer-data-[state=checked]:text-primary flex h-full cursor-pointer items-center justify-center gap-1 px-7 font-semibold"
-                    >
-                      {plan.type.charAt(0).toUpperCase() + plan.type.slice(1)}
-                    </Label>
-                  </div>
-                ))}
-              </RadioGroup>
-            </div>
+            <Separator className="my-4" />
+            <ul className="space-y-2">
+              {plan.features.map((feature) => (
+                <li key={feature} className="flex items-start gap-2">
+                  <CircleCheck className="h-4 w-4 mt-1 text-green-600" />{" "}
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <Button
+              variant={plan.isPopular ? "default" : "outline"}
+              size="lg"
+              className="w-full mt-6"
+            >
+              {plan.buttonText}
+            </Button>
           </div>
-          <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
-            {currentPricingOptions.map((option) => (
-              <div
-                key={option.id}
-                className={`flex w-full flex-col rounded-lg border p-6 text-left ${
-                  option.isPopular ? "bg-muted" : ""
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <Badge className="mb-8 block w-fit">{option.badge}</Badge>
-                  <span className="text-4xl font-medium">${option.price}</span>
-                </div>
-
-                <Separator className="my-6" />
-                <div className="flex h-full flex-col justify-between gap-20">
-                  <div>
-                    <ul className="text-muted-foreground space-y-4">
-                      {option.features
-                        .slice(
-                          0,
-                          expandedFeatures[option.id]
-                            ? option.features.length
-                            : 3
-                        )
-                        .map((feature, index) => (
-                          <li key={index} className="flex items-center gap-2">
-                            <Check className="size-4" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                    </ul>
-                    {option.features.length > 3 && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="mt-4 p-0 h-auto text-muted-foreground hover:text-primary"
-                        onClick={() => toggleFeatures(option.id)}
-                      >
-                        {expandedFeatures[option.id]
-                          ? "Show less"
-                          : `+${option.features.length - 3} more features`}
-                      </Button>
-                    )}
-                  </div>
-                  <Button className="w-full">{option.buttonText}</Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

@@ -27,7 +27,7 @@ export default function ListTemplateSection({
 }: Blog7Props) {
   return (
     <section className="px-5">
-      <div className="max-w-7xl mx-auto flex flex-col gap-10">
+      <div className="container mx-auto flex flex-col gap-10 py-28">
         <div className="text-left">
           <Badge variant="secondary" className="mb-6">
             {tagline}
