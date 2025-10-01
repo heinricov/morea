@@ -1,9 +1,32 @@
 import React from "react";
+import { Metadata } from "next";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+
+export const metadata: Metadata = {
+  title: "Kontak Kami - Morea",
+  description:
+    "Hubungi tim Morea untuk pertanyaan, feedback, atau peluang kolaborasi. Kami siap membantu Anda dengan template website profesional dan modern.",
+  keywords: [
+    "kontak morea",
+    "hubungi morea",
+    "customer service morea",
+    "support morea",
+    "bantuan template website",
+  ],
+  openGraph: {
+    title: "Kontak Kami - Morea",
+    description:
+      "Hubungi tim Morea untuk pertanyaan, feedback, atau peluang kolaborasi. Kami siap membantu Anda dengan template website profesional dan modern.",
+    url: "https://morea.com/contact",
+  },
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export default function ContactPage() {
   const title = "Contact Us";

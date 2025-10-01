@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -9,6 +10,28 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ChevronRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Blog - Tips & Tutorial Template Website - Morea",
+  description:
+    "Temukan tips, tutorial, dan panduan lengkap tentang template website, desain web, dan pengembangan website modern. Update terbaru dari tim Morea.",
+  keywords: [
+    "blog template website",
+    "tutorial template",
+    "tips desain website",
+    "panduan website",
+    "artikel template",
+  ],
+  openGraph: {
+    title: "Blog - Tips & Tutorial Template Website - Morea",
+    description:
+      "Temukan tips, tutorial, dan panduan lengkap tentang template website, desain web, dan pengembangan website modern. Update terbaru dari tim Morea.",
+    url: "https://morea.com/blogs",
+  },
+  alternates: {
+    canonical: "/blogs",
+  },
+};
 
 const Blog02Page = () => {
   return (

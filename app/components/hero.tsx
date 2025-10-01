@@ -14,11 +14,13 @@ export default function HeroSection() {
               <div className="md:w-1/2">
                 <div>
                   <h1 className="max-w-md text-balance text-5xl font-medium md:text-6xl">
-                    Perluas Akses Bisnis Anda.
+                    Template Website Profesional untuk Semua Kebutuhan Bisnis
                   </h1>
                   <p className="text-muted-foreground my-8 max-w-2xl text-balance text-xl">
-                    Dengan website global, Anda dapat menjangkau pasar yang
-                    lebih luas dan mendapatkan lebih banyak pelanggan.
+                    Dapatkan template website modern dan responsive untuk
+                    company profile, toko online, sekolah, rumah sakit, dan
+                    berbagai kebutuhan bisnis lainnya. Mudah dikustomisasi dan
+                    SEO-friendly.
                   </p>
 
                   <div className="flex items-center gap-3">
@@ -101,10 +103,11 @@ export default function HeroSection() {
                 <div className="bg-background rounded-(--radius) shadow-foreground/10 ring-foreground/5 relative h-full -translate-y-12 skew-x-6 overflow-hidden border border-transparent shadow-md ring-1">
                   <Image
                     src="/product/shell-global/shell-global.png"
-                    alt="app screen"
+                    alt="Template Website Shell Global - Contoh Template Company Profile Profesional"
                     width="2880"
                     height="1842"
                     className="object-top-left size-full object-cover"
+                    priority
                   />
                 </div>
               </div>
