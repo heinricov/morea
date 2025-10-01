@@ -1,55 +1,61 @@
-import { ArrowRight, Check } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 
-interface Cta4Props {
-  title?: string;
-  description?: string;
-  buttonText?: string;
-  buttonUrl?: string;
-  items?: string[];
+interface Cta13Props {
+  heading: string;
+  description: string;
+  buttons?: {
+    primary?: {
+      text: string;
+      url: string;
+    };
+    secondary?: {
+      text: string;
+      url: string;
+    };
+  };
 }
 
-const defaultItems = [
-  "Easy Integration",
-  "24/7 Support",
-  "Customizable Design",
-  "Scalable Performance",
-  "Hundreds of Blocks",
-];
-
 export default function CtaSection({
-  title = "Call to Action",
-  description = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto illo praesentium nisi, accusantium quae.",
-  buttonText = "Get Started",
-  buttonUrl = "https://shadcnblocks.com",
-  items = defaultItems,
-}: Cta4Props) {
+  heading = "Call to Action",
+  description = "Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time.",
+  buttons = {
+    primary: {
+      text: "Buy Now",
+      url: "https://www.shadcnblocks.com",
+    },
+    secondary: {
+      text: "Contact Us",
+      url: "https://www.shadcnblocks.com",
+    },
+  },
+}: Cta13Props) {
   return (
-    <section className="py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-5">
-        <div className="flex justify-center">
-          <div className="max-w-5xl">
-            <div className="flex flex-col items-start justify-between gap-8 rounded-lg bg-muted px-6 py-10 md:flex-row lg:px-20 lg:py-16">
-              <div className="md:w-1/2">
-                <h4 className="mb-1 text-2xl font-bold md:text-3xl">{title}</h4>
-                <p className="text-muted-foreground">{description}</p>
-                <Button className="mt-6" asChild>
-                  <a href={buttonUrl} target="_blank">
-                    {buttonText} <ArrowRight className="size-4" />
-                  </a>
+    <section className="py-32">
+      <div className="container mx-auto px-5 md:px-0">
+        <div className="bg-accent rounded-lg p-8 md:rounded-xl lg:p-12">
+          <div className="max-w-4xl">
+            <h3 className="mb-4 text-3xl font-semibold md:text-5xl lg:mb-6 lg:text-6xl">
+              {heading}
+            </h3>
+            <p className="text-muted-foreground mb-8 text-lg font-medium lg:text-xl">
+              {description}
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+              {buttons.primary && (
+                <Button size="lg" className="w-full sm:w-auto" asChild>
+                  <a href={buttons.primary.url}>{buttons.primary.text}</a>
                 </Button>
-              </div>
-              <div className="md:w-1/3">
-                <ul className="flex flex-col space-y-2 text-sm font-medium">
-                  {items.map((item, idx) => (
-                    <li className="flex items-center" key={idx}>
-                      <Check className="mr-4 size-4 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              )}
+              {buttons.secondary && (
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                  asChild
+                >
+                  <a href={buttons.secondary.url}>{buttons.secondary.text}</a>
+                </Button>
+              )}
             </div>
           </div>
         </div>

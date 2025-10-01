@@ -23,7 +23,10 @@ export default function Home() {
         buttonText="View all articles"
         buttonUrl="#"
       />
-      <CtaSection />
+      <CtaSection
+        heading="Call to Action"
+        description="Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time."
+      />
     </section>
   );
 }
