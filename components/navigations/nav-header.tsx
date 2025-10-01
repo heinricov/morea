@@ -13,7 +13,7 @@ const menuItems = [
   { name: "Blog", href: "/blogs" },
   { name: "Pricing", href: "/pricing" },
   { name: "FAQ", href: "/faq" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/contact" }
 ];
 
 export const NavHeader = () => {
@@ -49,11 +49,7 @@ export const NavHeader = () => {
           <div className="relative flex items-center justify-between py-3 lg:py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <NavLogo
-                title="Morea"
-                url="/"
-                className="flex items-center space-x-2"
-              />
+              <NavLogo url="/" className="flex items-center space-x-2" />
             </div>
 
             {/* Desktop Navigation */}

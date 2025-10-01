@@ -35,12 +35,12 @@ const defaultSocialLinks = [
   { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
   { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
   { icon: <FaTwitter className="size-5" />, href: "#", label: "Twitter" },
-  { icon: <FaLinkedin className="size-5" />, href: "#", label: "LinkedIn" },
+  { icon: <FaLinkedin className="size-5" />, href: "#", label: "LinkedIn" }
 ];
 
 const defaultLegalLinks = [
   { name: "Terms and Conditions", href: "#" },
-  { name: "Privacy Policy", href: "#" },
+  { name: "Privacy Policy", href: "#" }
 ];
 
 export default function NavFooter({
@@ -48,7 +48,7 @@ export default function NavFooter({
     url: "https://www.morea.tech",
     src: "https://deifkwefumgah.cloudfront.net/morea/block/logos/morea-icon.svg",
     alt: "logo",
-    title: "Morea",
+    title: "Morea"
   },
   sections = NavFooterMenu,
   description = "Desain website gratis untuk semua kebutuhan",
@@ -57,7 +57,7 @@ export default function NavFooter({
   legalLinks = defaultLegalLinks,
   phone = "081234567890",
   email = "info@morea.tech",
-  address = "Jl. Raya No. 1, Jakarta",
+  address = "Jl. Raya No. 1, Jakarta"
 }: Footer7Props) {
   return (
     <section className="">
@@ -66,13 +66,7 @@ export default function NavFooter({
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
             {/* Logo */}
             <div className="flex items-center gap-2 lg:justify-start">
-              <NavLogo
-                url={logo.url}
-                src={logo.src}
-                alt={logo.alt}
-                title={logo.title}
-                className="lg:justify-start"
-              />
+              <NavLogo url="/" className="flex items-center space-x-2" />
             </div>
             <ul className="items-center gap-3 text-muted-foreground">
               <li className="flex items-center gap-2">

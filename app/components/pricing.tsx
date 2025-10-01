@@ -13,9 +13,9 @@ const plans = [
       "20 AI portraits",
       "Choice of 2 styles",
       "Choice of 2 filters",
-      "2 retouch credits",
+      "2 retouch credits"
     ],
-    buttonText: "Get 20 portraits in 5 hours",
+    buttonText: "Get 20 portraits in 5 hours"
   },
   {
     name: "Advanced",
@@ -28,10 +28,10 @@ const plans = [
       "50 AI portraits",
       "Choice of 5 styles",
       "Choice of 5 filters",
-      "5 retouch credits",
+      "5 retouch credits"
     ],
     buttonText: "Get 50 portraits in 3 hours",
-    isPopular: true,
+    isPopular: true
   },
   {
     name: "Premium",
@@ -43,21 +43,21 @@ const plans = [
       "100 AI portraits",
       "Choice of 10 styles",
       "Choice of 10 filters",
-      "10 retouch credits",
+      "10 retouch credits"
     ],
-    buttonText: "Get 100 portraits in 1 hour",
-  },
+    buttonText: "Get 100 portraits in 1 hour"
+  }
 ];
 
 export default function PricingSection() {
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6">
-      <h1 className="text-5xl sm:text-6xl font-semibold text-center tracking-tighter">
+      <h1 className="text-5xl sm:text-6xl text-primary font-semibold text-center tracking-tighter">
         Pricing
       </h1>
       <div className="mt-12 sm:mt-16 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {plans.map((plan) => (
-          <div key={plan.name} className="border rounded-lg p-6">
+          <div key={plan.name} className="border rounded-lg p-6 bg-accent">
             <h3 className="text-lg font-medium">{plan.name}</h3>
             <p className="mt-2 text-4xl font-bold">${plan.price}</p>
             <p className="mt-4 font-medium text-muted-foreground">

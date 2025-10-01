@@ -6,7 +6,7 @@ import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
+  CardHeader
 } from "@/components/ui/card";
 
 interface Post {
@@ -46,7 +46,7 @@ export default function ListBlogSection({
       published: "1 Jan 2024",
       url: "https://shadcnblocks.com",
       image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg"
     },
     {
       id: "post-2",
@@ -58,7 +58,7 @@ export default function ListBlogSection({
       published: "1 Jan 2024",
       url: "https://shadcnblocks.com",
       image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg"
     },
     {
       id: "post-3",
@@ -70,18 +70,18 @@ export default function ListBlogSection({
       published: "1 Jan 2024",
       url: "https://shadcnblocks.com",
       image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
-    },
-  ],
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg"
+    }
+  ]
 }: Blog7Props) {
   return (
-    <section className="px-5">
+    <section className="px-4 md:px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-10">
         <div className="text-left">
-          <Badge variant="secondary" className="mb-6">
+          <Badge variant="secondary" className="mb-6 text-primary">
             {tagline}
           </Badge>
-          <h2 className="mb-3 text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
+          <h2 className="mb-3 text-3xl font-semibold text-primary text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
             {heading}
           </h2>
           <p className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg">
@@ -98,7 +98,7 @@ export default function ListBlogSection({
           {posts.map((post) => (
             <Card
               key={post.id}
-              className="grid grid-rows-[auto_auto_1fr_auto] pt-0"
+              className="grid grid-rows-[auto_auto_1fr_auto] bg-accent pt-0"
             >
               <div className="aspect-16/9 w-full">
                 <a
@@ -123,16 +123,6 @@ export default function ListBlogSection({
               <CardContent>
                 <p className="text-muted-foreground">{post.summary}</p>
               </CardContent>
-              <CardFooter>
-                <a
-                  href={post.url}
-                  target="_blank"
-                  className="flex items-center text-foreground hover:underline"
-                >
-                  Read more
-                  <ArrowRight className="ml-2 size-4" />
-                </a>
-              </CardFooter>
             </Card>
           ))}
         </div>

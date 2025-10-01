@@ -29,14 +29,14 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const title = "Contact Us";
+  const title = "Hubungi Kami";
   const description =
-    "We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!";
+    "Kami siap membantu Anda dengan template website profesional dan modern.";
   const phone = "(123) 34567890";
   const email = "email@example.com";
   const web = { label: "morea.tech", url: "https://morea.tech" };
   return (
-    <section className="h-screen flex items-center justify-center px-5 pb-24">
+    <section className="flex items-center justify-center px-5 py-24">
       <div className="container">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="mx-auto flex max-w-sm flex-col justify-between gap-10">
@@ -48,11 +48,11 @@ export default function ContactPage() {
             </div>
             <div className="mx-auto w-fit lg:mx-0">
               <h3 className="mb-6 text-center text-2xl font-semibold lg:text-left">
-                Contact Details
+                Detail Kontak
               </h3>
               <ul className="ml-4 list-disc">
                 <li>
-                  <span className="font-bold">Phone: </span>
+                  <span className="font-bold">Telepon: </span>
                   {phone}
                 </li>
                 <li>

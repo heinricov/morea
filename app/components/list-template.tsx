@@ -23,16 +23,16 @@ export default function ListTemplateSection({
   tagline = "Latest Updates",
   heading = "Blog Posts",
   description = "Discover the latest trends, tips, and best practices in modern web development. From UI components to design systems, stay updated with our expert insights.",
-  posts = templateData,
+  posts = templateData
 }: Blog7Props) {
   return (
     <section className="px-5">
       <div className="container mx-auto flex flex-col gap-10 py-28">
         <div className="text-left">
-          <Badge variant="secondary" className="mb-6">
+          <Badge variant="secondary" className="mb-6 text-primary">
             {tagline}
           </Badge>
-          <h2 className="mb-3 text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
+          <h2 className="mb-3 text-primary text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
             {heading}
           </h2>
           <p className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg">

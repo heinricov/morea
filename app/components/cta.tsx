@@ -21,20 +21,20 @@ export default function CtaSection({
   buttons = {
     primary: {
       text: "Buy Now",
-      url: "https://www.shadcnblocks.com",
+      url: "https://www.shadcnblocks.com"
     },
     secondary: {
       text: "Contact Us",
-      url: "https://www.shadcnblocks.com",
-    },
-  },
+      url: "https://www.shadcnblocks.com"
+    }
+  }
 }: Cta13Props) {
   return (
     <section className="py-32">
       <div className="container mx-auto px-5 md:px-0">
         <div className="bg-accent rounded-lg p-8 md:rounded-xl lg:p-12">
           <div className="max-w-4xl">
-            <h3 className="mb-4 text-3xl font-semibold md:text-5xl lg:mb-6 lg:text-6xl">
+            <h3 className="mb-4 text-3xl font-semibold md:text-5xl lg:mb-6 lg:text-6xl text-primary">
               {heading}
             </h3>
             <p className="text-muted-foreground mb-8 text-lg font-medium lg:text-xl">
