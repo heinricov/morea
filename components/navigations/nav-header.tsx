@@ -9,9 +9,11 @@ import ThemeButton from "./button-theme";
 import SearchInput from "./search-input";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Templates", href: "/templates" },
+  { name: "Blog", href: "/blogs" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const NavHeader = () => {
