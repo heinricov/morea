@@ -5,18 +5,18 @@ import LayoutProvider from "@/components/providers/layout-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
   title: {
     default: "Morea - Template Website Profesional & Modern",
-    template: "%s | Morea",
+    template: "%s | Morea"
   },
   description:
     "Morea menyediakan template website profesional dan modern untuk berbagai kebutuhan bisnis. Template siap pakai dengan desain responsive, mudah dikustomisasi, dan SEO-friendly. Mulai dari company profile, toko online, hingga website sekolah dan rumah sakit.",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "website builder",
     "desain website",
     "template responsive",
-    "template modern",
+    "template modern"
   ],
   authors: [{ name: "Morea Team" }],
   creator: "Morea",
@@ -38,16 +38,16 @@ export const metadata: Metadata = {
   formatDetection: {
     email: false,
     address: false,
-    telephone: false,
+    telephone: false
   },
-  metadataBase: new URL("https://morea.com"),
+  metadataBase: new URL("https://www.morea.lat"),
   alternates: {
-    canonical: "/",
+    canonical: "/"
   },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://morea.com",
+    url: "https://www.morea.lat",
     title: "Morea - Template Website Profesional & Modern",
     description:
       "Morea menyediakan template website profesional dan modern untuk berbagai kebutuhan bisnis. Template siap pakai dengan desain responsive, mudah dikustomisasi, dan SEO-friendly.",
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Morea - Template Website Profesional",
-      },
-    ],
+        alt: "Morea - Template Website Profesional"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     description:
       "Template website profesional dan modern untuk berbagai kebutuhan bisnis. Siap pakai, responsive, dan SEO-friendly.",
     images: ["/og-image.jpg"],
-    creator: "@morea",
+    creator: "@morea"
   },
   robots: {
     index: true,
@@ -77,23 +77,23 @@ export const metadata: Metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+      "max-snippet": -1
+    }
   },
   verification: {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
+    yahoo: "your-yahoo-verification-code"
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
-  },
+    icon: "/icon.ico",
+    shortcut: "/icon.ico",
+    apple: "/icon.ico"
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -103,24 +103,24 @@ export default function RootLayout({
     name: "Morea",
     description:
       "Morea menyediakan template website profesional dan modern untuk berbagai kebutuhan bisnis",
-    url: "https://morea.com",
+    url: "https://www.morea.lat",
     logo: "https://morea.com/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
-      availableLanguage: "Indonesian",
+      availableLanguage: "Indonesian"
     },
     sameAs: [
       "https://twitter.com/morea",
       "https://facebook.com/morea",
-      "https://instagram.com/morea",
+      "https://instagram.com/morea"
     ],
     offers: {
       "@type": "Offer",
       description: "Template website profesional dan modern",
       price: "0",
-      priceCurrency: "IDR",
-    },
+      priceCurrency: "IDR"
+    }
   };
 
   return (
@@ -129,7 +129,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            __html: JSON.stringify(structuredData)
           }}
         />
       </head>

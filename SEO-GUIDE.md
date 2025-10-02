@@ -1,5 +1,7 @@
 # SEO Optimization Guide - Morea
 
+URL: https://www.morea.lat
+
 ## 🎯 Overview
 
 Project Morea telah dioptimalkan untuk SEO dengan implementasi lengkap meta tags, structured data, dan best practices untuk meningkatkan visibilitas di search engine.
