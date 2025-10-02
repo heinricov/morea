@@ -12,10 +12,10 @@ export const metadata: Metadata = generateMetadata({
     "template website murah",
     "template website gratis",
     "harga website template",
-    "paket website template",
+    "paket website template"
   ],
   url: "/pricing",
-  type: "website",
+  type: "website"
 });
 
 export default function PricingPage() {
@@ -24,7 +24,7 @@ export default function PricingPage() {
     title: "Harga Template Website - Paket Terjangkau untuk Semua Kebutuhan",
     description:
       "Lihat paket harga template website Morea yang terjangkau. Mulai dari template gratis hingga paket premium dengan fitur lengkap.",
-    url: "/pricing",
+    url: "/pricing"
   });
 
   return (
@@ -32,13 +32,13 @@ export default function PricingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
+          __html: JSON.stringify(structuredData)
         }}
       />
       <section className="py-24">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
               Harga Template Website
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -47,7 +47,6 @@ export default function PricingPage() {
               SEO-friendly, dan dukungan teknis.
             </p>
           </div>
-
           <PricingSection />
         </div>
       </section>

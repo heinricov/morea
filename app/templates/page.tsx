@@ -14,10 +14,10 @@ export const metadata: Metadata = generateMetadata({
     "template rumah sakit",
     "template responsive",
     "template modern",
-    "website template indonesia",
+    "website template indonesia"
   ],
   url: "/templates",
-  type: "website",
+  type: "website"
 });
 
 export default function TemplatesPage() {
@@ -27,7 +27,7 @@ export default function TemplatesPage() {
       "Template Website Profesional - Koleksi Template Modern & Responsive",
     description:
       "Jelajahi koleksi template website profesional dari Morea. Template modern, responsive, dan SEO-friendly untuk berbagai kebutuhan bisnis.",
-    url: "/templates",
+    url: "/templates"
   });
 
   return (
@@ -35,22 +35,11 @@ export default function TemplatesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
+          __html: JSON.stringify(structuredData)
         }}
       />
       <section className="py-24">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Template Website Profesional
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Pilih dari koleksi template website modern dan responsive kami.
-              Semua template telah dioptimalkan untuk SEO dan siap digunakan
-              untuk berbagai kebutuhan bisnis.
-            </p>
-          </div>
-
           <ListTemplateSection
             tagline="Koleksi Template"
             heading="Template Website Terbaru"

@@ -5,15 +5,13 @@ import { CircleCheck } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: 19,
-    description:
-      "Get 20 AI-generated portraits with 2 unique styles and filters.",
+    price: 100.0,
+    description: "Anda tinggal download dan gunakan template nya.",
     features: [
-      "5 hours turnaround time",
-      "20 AI portraits",
-      "Choice of 2 styles",
-      "Choice of 2 filters",
-      "2 retouch credits"
+      "Responsive Website",
+      "5 - 7 halaman",
+      "12+ Komponen",
+      "NextJS (App Route)"
     ],
     buttonText: "Get 20 portraits in 5 hours"
   },
@@ -55,11 +53,11 @@ export default function PricingSection() {
       <h1 className="text-5xl sm:text-6xl text-primary font-semibold text-center tracking-tighter">
         Pricing
       </h1>
-      <div className="mt-12 sm:mt-16 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="mt-12 sm:mt-16 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {plans.map((plan) => (
           <div key={plan.name} className="border rounded-lg p-6 bg-accent">
             <h3 className="text-lg font-medium">{plan.name}</h3>
-            <p className="mt-2 text-4xl font-bold">${plan.price}</p>
+            <p className="mt-2 text-4xl font-bold">Rp{plan.price}K</p>
             <p className="mt-4 font-medium text-muted-foreground">
               {plan.description}
             </p>

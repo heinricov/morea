@@ -16,13 +16,13 @@ export default function Home() {
       />
       <PricingSection />
       <TestimonialSection />
-      <ListBlogSection
+      {/* <ListBlogSection
         tagline="Latest Updates"
         heading="Blog Posts"
         description="Morea is a template website built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project."
         buttonText="View all articles"
         buttonUrl="#"
-      />
+      /> */}
       <CtaSection
         heading="Call to Action"
         description="Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time."
