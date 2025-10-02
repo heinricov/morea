@@ -13,7 +13,7 @@ interface NavLogoProps {
 
 export default function NavLogo({
   url = "/",
-  src = "/logo-light.png",
+  src = "/logo.png",
   alt = "Morea Logo",
   className = "",
   showTitle = true,
