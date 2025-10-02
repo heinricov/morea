@@ -31,7 +31,10 @@ export const metadata: Metadata = {
     "website builder",
     "desain website",
     "template responsive",
-    "template modern"
+    "template modern",
+    "morea dev",
+    "morea team",
+    "morea"
   ],
   authors: [{ name: "Morea Team" }],
   creator: "Morea",
