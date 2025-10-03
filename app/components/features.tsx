@@ -35,7 +35,7 @@ const items = [
 export function Features() {
   return (
     <section id="layanan" className="border-b">
-      <div className="mx-auto container max-w-7xl py-12 md:py-16">
+      <div className="mx-auto container max-w-7xl px-6 py-12 md:py-16">
         <div className="mb-8">
           <h2 className="mb-3 text-primary text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
             Layanan Kami

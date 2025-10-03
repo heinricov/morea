@@ -114,7 +114,7 @@ export default function Portfolio({
   portfolioItems = defaultPortfolioItems
 }: PortfolioProps) {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
+    <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/20">
       <div className="container max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-left">

@@ -27,8 +27,8 @@ export default function ListTemplateSection({
   posts = templateData
 }: Blog7Props) {
   return (
-    <section className="px-5 border-b">
-      <div className="container max-w-7xl mx-auto flex flex-col gap-10 py-28">
+    <section className="border-b">
+      <div className="container max-w-7xl mx-auto flex flex-col gap-10 py-28 px-6">
         <div className="text-left">
           <h2 className="mb-3 text-primary text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
             {heading}
