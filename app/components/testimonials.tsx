@@ -65,13 +65,9 @@ export default function TestimonialsSection() {
   return (
     <div className="min-h-screen flex justify-center items-center py-12">
       <div className="h-full w-full">
-        <h2 className="text-5xl text-primary font-semibold text-center tracking-[-0.03em] px-6 text-pretty">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary font-semibold text-center tracking-[-0.03em] px-6 text-pretty">
           Testimoni
         </h2>
-        <p className="mt-3 text-center text-muted-foreground text-xl">
-          Testimoni dari pengguna yang telah menggunakan dan menyukai produk
-          kami setiap hari.
-        </p>
         <div className="mt-14 relative">
           <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-linear-to-r from-background to-transparent" />
           <div className="z-10 absolute right-0 inset-y-0 w-[15%] bg-linear-to-l from-background to-transparent" />

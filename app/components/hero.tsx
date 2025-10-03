@@ -10,10 +10,10 @@ export default function HeroSection() {
       <main className="overflow-hidden">
         <section className="bg-linear-to-b to-muted from-background">
           <div className="relative py-36">
-            <div className="relative z-10 mx-auto w-full container px-6">
+            <div className="relative z-10 mx-auto w-full container max-w-7xl px-6">
               <div className="md:w-1/2">
                 <div>
-                  <h1 className="max-w-md text-balance text-primary text-4xl font-extrabold md:text-6xl">
+                  <h1 className="max-w-md text-balance text-primary text-3xl font-extrabold md:text-4xl">
                     Template Website Profesional untuk Semua Kebutuhan Bisnis
                   </h1>
                   <p className="text-muted-foreground my-8 max-w-2xl text-balance text-xl">
@@ -25,9 +25,9 @@ export default function HeroSection() {
 
                   <div className="flex items-center gap-3">
                     <Button asChild size="lg" className="pr-4.5">
-                      <Link href="#link">
-                        <span className="text-nowrap">Gunakan Template</span>
+                      <Link href="/templates">
                         <LayoutTemplate className="opacity-50" />
+                        <span className="text-nowrap">Gunakan Template</span>
                       </Link>
                     </Button>
                     <Button
@@ -37,7 +37,7 @@ export default function HeroSection() {
                       variant="outline"
                       className="pl-5"
                     >
-                      <Link href="#link">
+                      <Link href="/reservation">
                         <Globe className="fill-primary/25 stroke-primary" />
                         <span className="text-nowrap">Buat Website</span>
                       </Link>

@@ -45,7 +45,7 @@ export const NavHeader = () => {
             "bg-background/75 border-b border-black/5 backdrop-blur-lg"
         )}
       >
-        <div className="mx-auto container px-4 sm:px-6">
+        <div className="mx-auto container max-w-7xl px-4 sm:px-6">
           <div className="relative flex items-center justify-between py-3 lg:py-4">
             {/* Logo */}
             <div className="flex items-center">

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { generateMetadata, generateStructuredData } from "@/lib/seo";
-import PricingSection from "../components/pricing";
+import PricingSection from "./components/pricing";
 
 export const metadata: Metadata = generateMetadata({
   title: "Harga Template Website - Paket Terjangkau untuk Semua Kebutuhan",

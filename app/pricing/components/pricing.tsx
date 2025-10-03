@@ -50,9 +50,6 @@ const plans = [
 export default function PricingSection() {
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6">
-      <h1 className="text-5xl sm:text-6xl text-primary font-semibold text-center tracking-tighter">
-        Pricing
-      </h1>
       <div className="mt-12 sm:mt-16 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {plans.map((plan) => (
           <div key={plan.name} className="border rounded-lg p-6 bg-accent">

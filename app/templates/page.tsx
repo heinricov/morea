@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { generateMetadata, generateStructuredData } from "@/lib/seo";
-import ListTemplateSection from "../components/list-template";
+import ListTemplateSection from "../components/templates";
 
 export const metadata: Metadata = generateMetadata({
   title: "Template Website Profesional - Koleksi Template Modern & Responsive",

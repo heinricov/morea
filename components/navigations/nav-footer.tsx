@@ -61,7 +61,7 @@ export default function NavFooter({
 }: Footer7Props) {
   return (
     <section className="">
-      <div className="container mx-auto px-5">
+      <div className="container max-w-7xl mx-auto px-5">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
             {/* Logo */}

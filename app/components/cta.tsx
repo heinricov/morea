@@ -31,7 +31,7 @@ export default function CtaSection({
 }: Cta13Props) {
   return (
     <section className="py-32">
-      <div className="container mx-auto px-5 md:px-0">
+      <div className="container max-w-7xl mx-auto px-5 md:px-0">
         <div className="bg-accent rounded-lg p-8 md:rounded-xl lg:p-12">
           <div className="max-w-4xl">
             <h3 className="mb-4 text-3xl font-semibold md:text-5xl lg:mb-6 lg:text-6xl text-primary">
