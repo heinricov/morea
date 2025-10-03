@@ -17,7 +17,7 @@ export default function Home() {
         description="Kami menyediakan template website yang mudah di modifikasi dan di deploy seperti magang atau kost website yang juga sudah kami kustomisasi."
       />
       <Portfolio />
-      <InvitationSection />
+      {/* <InvitationSection /> */}
       <TestimonialSection />
       <CtaSection
         heading="Call to Action"
